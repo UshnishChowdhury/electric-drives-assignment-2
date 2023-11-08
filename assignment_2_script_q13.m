@@ -10,7 +10,7 @@ w_N = 3000 * (2*pi/60);
 subplot(2,1,1);
 
 % Plotting output current per unit
-plot(i.time, i.data);
+plot(i.time, i.data / i_N);
 grid on;
 title('Output Current, i (pu) as a function of Time')
 xlabel('Time (s)'); 
