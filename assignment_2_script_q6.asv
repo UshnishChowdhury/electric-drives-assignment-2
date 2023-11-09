@@ -11,7 +11,6 @@ k_i = alpha_c^2*L;         % Integral gain
 k_t = alpha_c*L;           % Reference feedforward gain
 u_min = -140;               % Saturation: lower limit
 u_max = 140;                % Saturation: upper limit
-T_sw = 200e-6;
 %% Gains of the 2DOF PI speed controller (for Section 4.2)
 %alpha s = 0.1*alpha c; % Closed−loop bandwidth
 %k ps = ...; % Proportional gain
@@ -22,18 +21,10 @@ T_sw = 200e-6;
 %tau max = 2*tau N; % Saturation: upper limit
 
 subplot(2, 1, 1)
-plot(tau_M.time, tau_M.data, 'LineWidth', 1);
+plot(tau_M_ref.time, w_M.data);
 grid on;
-hold on;
-% Reference signal
-stairs(tau_M_ref.time, tau_M_ref.data, 'r', 'LineWidth', 1);     
-axis([0 0.02 -1.25 1.25]);
+%hold on;
+%stairs(i_k.time, i_k.data, 'r');    % Discrete signal
+axis([0 0.002 -1 1]);           % Controls axis scaling
 xlabel('Time (s)'); 
-ylabel('Torque (Nm)');
-
-subplot(2, 1, 2)
-plot(w_M.time, w_M.data, 'LineWidth', 1); 
-grid on;
-axis([0 0.02 -5 5]);
-xlabel('Time (s)'); 
-ylabel('Speed (rad / sec)');
+ylabel('Current (A)');
