@@ -28,6 +28,7 @@ hold on;
 % Reference signal
 stairs(tau_M_ref.time, tau_M_ref.data, 'r', 'LineWidth', 1);     
 axis([0 0.02 -1.25 1.25]);
+title("Motor Torque as a function of time");
 xlabel('Time (s)'); 
 ylabel('Torque (Nm)');
 
@@ -35,5 +36,6 @@ subplot(2, 1, 2)
 plot(w_M.time, w_M.data, 'LineWidth', 1); 
 grid on;
 axis([0 0.02 -5 5]);
+title("Motor Rotational Speed as a function of time");
 xlabel('Time (s)'); 
 ylabel('Speed (rad / sec)');
