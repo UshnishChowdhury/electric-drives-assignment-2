@@ -23,7 +23,7 @@ tau_N = 7;                    % Rated torque
 tau_min = -2*tau_N;           % Saturation: lower limit
 tau_max = 2*tau_N;            % Saturation: upper limit
 
-subplot(2, 1, 1)
+subplot(2, 1, 1);
 plot(tau_M.time, tau_M.data, 'LineWidth', 1);
 grid on;
 hold on;
