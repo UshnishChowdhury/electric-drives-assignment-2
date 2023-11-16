@@ -5,10 +5,10 @@ k = 0.35;                   % Flux factor
 J = 1e-3;                   % Moment of inertia
 %% Gains of the 2DOF PI current controller
 
-alpha_c = 2* pi* 400;         % Closed−loop bandwidth
-k_p = 2 * alpha_c* L - R;     % Proportional gain
-k_i = alpha_c^2 * L;         % Integral gain
-k_t = alpha_c * L;           % Reference feedforward gain
+alpha_c = 2* pi* 400;       % Closed−loop bandwidth
+k_p = 2 * alpha_c* L - R;   % Proportional gain
+k_i = alpha_c^2 * L;        % Integral gain
+k_t = alpha_c * L;          % Reference feedforward gain
 u_min = -140;               % Saturation: lower limit
 u_max = 140;                % Saturation: upper limit
 T_sw = 200e-6;

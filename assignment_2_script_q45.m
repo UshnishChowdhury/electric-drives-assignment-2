@@ -10,8 +10,6 @@ ylabel('Current (A)');
 subplot(2, 1, 2)
 plot(u.time, u.data);
 grid on;
-%hold on;
-%stairs(u_ref.time, u_ref.data, 'r');
 axis([0.15 0.1504 -10 150]);
 xlabel('Time (s)'); 
 ylabel('Voltage (V)');
